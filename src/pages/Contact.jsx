@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { submitCampusVisit } from '../lib/supabase';
 import { sendCampusVisitEmailNotification } from '../lib/emailNotification';
+import { MapPinIcon, PhoneIcon, MailIcon, CheckIcon } from '../components/Icons';
 
 export default function Contact() {
   const initialTourState = { name: '', phone: '', date: '', slot: 'Morning (9:30 AM)' };
@@ -70,7 +71,7 @@ export default function Contact() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 <div className="glass-card-main" style={{ borderLeft: '4px solid var(--brand-purple)' }}>
                   <h4 style={{ color: 'var(--brand-purple)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span>📍</span> Physical Campus Address
+                    <MapPinIcon size={18} color="var(--brand-purple)" /> Physical Campus Address
                   </h4>
                   <p style={{ fontWeight: 700, color: 'var(--color-ink)', fontSize: '1.05rem', marginTop: '6px' }}>
                     23, New Road, Ballot Close
@@ -85,7 +86,7 @@ export default function Contact() {
 
                 <div className="glass-card-main" style={{ borderLeft: '4px solid var(--brand-gold)' }}>
                   <h4 style={{ color: 'var(--brand-purple)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span>📞</span> Telephone Lines
+                    <PhoneIcon size={18} color="var(--brand-purple)" /> Telephone Lines
                   </h4>
                   <p style={{ fontWeight: 700, color: 'var(--color-ink)', fontSize: '1.05rem', marginTop: '6px' }}>
                     0808 031 1206
@@ -97,7 +98,7 @@ export default function Contact() {
 
                 <div className="glass-card-main" style={{ borderLeft: '4px solid var(--brand-flame)' }}>
                   <h4 style={{ color: 'var(--brand-purple)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span>✉️</span> Official Email
+                    <MailIcon size={18} color="var(--brand-purple)" /> Official Email
                   </h4>
                   <p style={{ fontWeight: 700, color: 'var(--color-ink)', fontSize: '1.05rem', marginTop: '6px' }}>
                     info@pmsnigeria.com
@@ -124,7 +125,9 @@ export default function Contact() {
 
               {tourBooked ? (
                 <div style={{ textAlign: 'center', padding: '30px 20px' }}>
-                  <div className="modal-gold-check">✓</div>
+                  <div className="modal-gold-check">
+                    <CheckIcon size={24} color="#3B127B" />
+                  </div>
                   <h4 className="heading-md">Visit Scheduled!</h4>
                   <p style={{ color: 'var(--color-text-muted)', marginTop: '8px' }}>
                     Thank you, {confirmedTour.name}. We look forward to receiving you on {confirmedTour.date} ({confirmedTour.slot}) at our campus. Your appointment has been recorded.

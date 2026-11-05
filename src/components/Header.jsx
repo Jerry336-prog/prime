@@ -1,9 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+
+  // Automatically close mobile menu whenever the user scrolls
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    let initialScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      // Small threshold to prevent accidental closes on tiny tap twitches
+      if (Math.abs(window.scrollY - initialScrollY) > 15) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [mobileMenuOpen]);
 
   const handleBookVisit = () => {
     navigate('/contact');

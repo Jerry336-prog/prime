@@ -1,4 +1,5 @@
 import React from 'react';
+import { TargetIcon, TelescopeIcon, SproutIcon } from '../components/Icons';
 
 export default function About() {
   return (
@@ -51,7 +52,9 @@ export default function About() {
 
           <div className="pillars-liquid-grid">
             <div className="pillar-glass-card" style={{ borderTop: '4px solid var(--brand-purple)' }}>
-              <div className="pillar-icon-box">🎯</div>
+              <div className="pillar-icon-box">
+                <TargetIcon size={26} color="var(--brand-purple)" />
+              </div>
               <h4>Our Motto</h4>
               <p style={{ fontStyle: 'italic', fontWeight: 700, color: 'var(--brand-purple)', marginBottom: '8px' }}>
                 “Quest for Excellence”
@@ -61,14 +64,18 @@ export default function About() {
               </p>
             </div>
             <div className="pillar-glass-card" style={{ borderTop: '4px solid var(--brand-gold)' }}>
-              <div className="pillar-icon-box">🔭</div>
+              <div className="pillar-icon-box">
+                <TelescopeIcon size={26} color="var(--brand-purple)" />
+              </div>
               <h4>Our Vision</h4>
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', marginTop: '8px' }}>
                 To remain a premier early childhood and primary institution celebrated for graduating disciplined, inquisitive, and academically self-reliant pupils.
               </p>
             </div>
             <div className="pillar-glass-card" style={{ borderTop: '4px solid var(--brand-flame)' }}>
-              <div className="pillar-icon-box">🌱</div>
+              <div className="pillar-icon-box">
+                <SproutIcon size={26} color="var(--brand-purple)" />
+              </div>
               <h4>Our Mission</h4>
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', marginTop: '8px' }}>
                 To nurture the whole child through individualized Montessori mentorship, modern literacy tools, and high ethical expectations.

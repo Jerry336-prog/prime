@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { PuzzleIcon, TeacherIcon, ShieldIcon, AwardIcon } from '../components/Icons';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -166,28 +167,36 @@ export default function Home() {
 
           <div className="pillars-liquid-grid">
             <div className="pillar-glass-card">
-              <div className="pillar-icon-box">🧩</div>
+              <div className="pillar-icon-box">
+                <PuzzleIcon size={26} color="var(--brand-purple)" />
+              </div>
               <h4>Pure Montessori Method</h4>
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', marginTop: '6px' }}>
                 Tactile learning apparatus that cultivate self-confidence, spatial discernment, and innate concentration.
               </p>
             </div>
             <div className="pillar-glass-card">
-              <div className="pillar-icon-box">👩‍🏫</div>
+              <div className="pillar-icon-box">
+                <TeacherIcon size={26} color="var(--brand-purple)" />
+              </div>
               <h4>Dedicated Mentors</h4>
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', marginTop: '6px' }}>
                 Certified, caring educators committed to understanding each pupil's unique learning rhythm.
               </p>
             </div>
             <div className="pillar-glass-card">
-              <div className="pillar-icon-box">🛡️</div>
+              <div className="pillar-icon-box">
+                <ShieldIcon size={26} color="var(--brand-purple)" />
+              </div>
               <h4>Safe, Stimulating Campus</h4>
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', marginTop: '6px' }}>
                 Purpose-built premises tailored for early childhood security and physical exploration.
               </p>
             </div>
             <div className="pillar-glass-card">
-              <div className="pillar-icon-box">🏆</div>
+              <div className="pillar-icon-box">
+                <AwardIcon size={26} color="var(--brand-purple)" />
+              </div>
               <h4>Secondary Placement</h4>
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', marginTop: '6px' }}>
                 Rigorous preparation ensuring our Basic 6 graduates gain admission into premier secondary schools.

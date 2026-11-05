@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { PhoneIcon, MailIcon, ClockIcon } from './Icons';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -50,10 +51,16 @@ export default function Footer() {
           {/* Col 4 */}
           <div className="footer-glass-col">
             <h5>Campus Enquiries</h5>
-            <div style={{ fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '8px', color: '#BDB1D4' }}>
-              <p>📞 Phone: 0808 031 1206</p>
-              <p>✉️ Email: info@pmsnigeria.com</p>
-              <p>⏰ Visiting Hours: Mon – Fri: 7:30 AM – 3:30 PM</p>
+            <div style={{ fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '10px', color: '#BDB1D4' }}>
+              <p style={{ display: 'flex', alignItems: 'center', gap: '8px', margin: 0 }}>
+                <PhoneIcon size={16} color="var(--brand-gold)" /> 0808 031 1206
+              </p>
+              <p style={{ display: 'flex', alignItems: 'center', gap: '8px', margin: 0 }}>
+                <MailIcon size={16} color="var(--brand-gold)" /> info@pmsnigeria.com
+              </p>
+              <p style={{ display: 'flex', alignItems: 'center', gap: '8px', margin: 0 }}>
+                <ClockIcon size={16} color="var(--brand-gold)" /> Mon – Fri: 7:30 AM – 3:30 PM
+              </p>
               <Link to="/contact" onClick={scrollToTop} style={{ color: 'var(--brand-gold)', fontWeight: 600, marginTop: '4px', display: 'inline-block' }}>
                 View Full Campus Location Details →
               </Link>
