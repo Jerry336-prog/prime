@@ -1,0 +1,764 @@
+/* =======================================================================
+   PRIME MONTESSORI SCHOOLS — FULL-WIDTH LIQUID GLASS HEADER & SOLID SYSTEM
+   ======================================================================= */
+
+/* ---------------------------------------------------------
+   0. PROFESSIONAL MOTION SYSTEM & KEYFRAME ANIMATIONS
+   --------------------------------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Page entrance wrapper */
+.page-animate-enter {
+  animation: fadeSlideUp 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Staggered Hero animations */
+.hero-stagger-1 {
+  opacity: 0;
+  animation: fadeSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
+}
+
+.hero-stagger-2 {
+  opacity: 0;
+  animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+.hero-stagger-3 {
+  opacity: 0;
+  animation: fadeSlideUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+}
+
+.hero-stagger-4 {
+  opacity: 0;
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+}
+
+/* Accessible Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   1. FULL-WIDTH LIQUID GLASS HEADER (Attached to Top, Not Floating)
+   --------------------------------------------------------- */
+.liquid-glass-navbar-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 72px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.85);
+  box-shadow: 0 4px 20px rgba(15, 5, 30, 0.04);
+  display: flex;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.liquid-glass-navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Brand Lockup */
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.brand-icon-wrap {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brand-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name-main {
+  font-family: var(--font-sans);
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--brand-purple);
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+.brand-name-sub {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--brand-purple);
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-top: 3px;
+  opacity: 0.9;
+}
+
+/* Navigation Tabs */
+.nav-links-desktop {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(241, 243, 246, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 4px;
+  border-radius: 9999px;
+  border: 1px solid #E5E7EB;
+}
+
+@media (min-width: 980px) {
+  .nav-links-desktop {
+    display: flex;
+  }
+}
+
+.nav-tab-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #4B5563;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  text-decoration: none; /* No underline */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-tab-btn:hover {
+  color: var(--brand-purple);
+  text-decoration: none;
+}
+
+.nav-tab-btn.active {
+  color: var(--brand-purple);
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+}
+
+/* Remove any bottom bar/line indicator */
+.nav-tab-btn.active::after {
+  display: none;
+}
+
+/* Solid CTA Button: "Book a visit →" */
+/* Tactile Button Press Micro-interaction */
+button:active, .btn-solid:active, .btn-nav-book:active {
+  transform: scale(0.98);
+}
+
+.btn-nav-book {
+  background-color: var(--brand-purple);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 10px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(59, 18, 123, 0.2);
+}
+
+.btn-nav-book:hover {
+  background-color: var(--brand-purple-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(59, 18, 123, 0.3);
+}
+
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+@media (min-width: 980px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-ink);
+}
+
+/* Mobile Drawer */
+.mobile-glass-drawer {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid #E5E7EB;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  z-index: 998;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-glass-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 18px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  background-color: #F8F9FA;
+  border: 1px solid #E5E7EB;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mobile-glass-link.active {
+  background-color: var(--brand-purple);
+  color: #FFFFFF;
+}
+
+/* ---------------------------------------------------------
+   2. HERO SECTION (Adjusted for Top Attached Header)
+   --------------------------------------------------------- */
+.hero-glass-wrapper {
+  position: relative;
+  min-height: 560px;
+  padding-top: 70px;
+  padding-bottom: 90px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--brand-purple-deep);
+}
+
+.hero-glass-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.72;
+  filter: saturate(1.1) brightness(0.98);
+  transform: scale(1.0);
+  transition: transform 6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-glass-wrapper:hover .hero-glass-bg {
+  transform: scale(1.03);
+}
+
+.hero-glass-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 7, 54, 0.48); /* Reduced purple dimness */
+}
+
+.hero-glass-content {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+}
+
+.hero-glass-title {
+  color: #FFFFFF;
+  margin-top: 18px;
+  margin-bottom: 22px;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.85); /* Ensures sharp contrast over brighter image */
+}
+
+.hero-glass-desc {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.65;
+  color: #FFFFFF;
+  margin-bottom: 38px;
+  max-width: 720px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85); /* Sharp text legibility */
+}
+
+.hero-btn-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ---------------------------------------------------------
+   3. SOLID STATS STRIP
+   --------------------------------------------------------- */
+.floating-stats-wrap {
+  position: relative;
+  z-index: 10;
+  margin-top: -46px;
+  margin-bottom: 70px;
+}
+
+.glass-stats-panel {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 20px;
+  padding: 30px 24px;
+  box-shadow: 0 16px 36px rgba(15, 5, 30, 0.08);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 24px;
+}
+
+.glass-stat-item {
+  padding: 8px 16px;
+  border-left: 3px solid var(--brand-gold);
+}
+
+.glass-stat-num {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--brand-purple);
+  line-height: 1;
+}
+
+.glass-stat-lbl {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-top: 6px;
+}
+
+.glass-stat-sub {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+/* ---------------------------------------------------------
+   4. CONTENT CARDS & SECTIONS
+   --------------------------------------------------------- */
+.section-space {
+  padding: 80px 0;
+  position: relative;
+}
+
+.glass-card-main {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+.glass-card-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.liquid-split-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 52px;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .liquid-split-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.glass-img-frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-img-frame img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.glass-floating-tag {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(22, 5, 47, 0.9);
+  color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-left: 3px solid var(--brand-gold);
+}
+
+/* Program Cards */
+.programs-glass-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .programs-glass-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.program-glass-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.program-glass-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09);
+}
+
+.program-card-img-wrap {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.program-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.program-glass-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: var(--brand-purple);
+  color: #FFFFFF;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.program-glass-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pill-glass-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 24px;
+}
+
+.pill-glass-item {
+  font-size: 0.78rem;
+  font-weight: 600;
+  background-color: #EDE8F7;
+  color: var(--brand-purple);
+  padding: 5px 12px;
+  border-radius: 9999px;
+  border: 1px solid #D8CEEE;
+}
+
+/* Pillars Grid */
+.pillars-liquid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.pillar-glass-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 18px;
+  padding: 32px 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.pillar-glass-card:hover {
+  border-color: var(--brand-purple);
+  box-shadow: 0 12px 30px rgba(59, 18, 123, 0.1);
+}
+
+.pillar-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background-color: #FEF7DE;
+  border: 1px solid #F8DE8B;
+  color: var(--brand-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------------
+   5. CALLOUT BANNER
+   --------------------------------------------------------- */
+.liquid-cta-banner {
+  background-color: var(--brand-purple);
+  border-radius: 24px;
+  padding: 56px 44px;
+  box-shadow: 0 20px 48px rgba(59, 18, 123, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+/* ---------------------------------------------------------
+   6. FORMS & INPUTS
+   --------------------------------------------------------- */
+.glass-form-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.glass-input, .glass-select, .glass-textarea {
+  padding: 13px 16px;
+  border-radius: 10px;
+  border: 1.5px solid #E5E7EB;
+  background-color: #F8F9FA;
+  color: var(--color-ink);
+  outline: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus, .glass-select:focus, .glass-textarea:focus {
+  border-color: var(--brand-purple);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(59, 18, 123, 0.12);
+}
+
+.glass-input.error, .glass-select.error {
+  border-color: #E11D48;
+  background-color: #FFF1F2;
+}
+
+.error-text {
+  font-size: 0.75rem;
+  color: #E11D48;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------
+   7. CONFIRMATION MODAL
+   --------------------------------------------------------- */
+.liquid-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(15, 4, 32, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.liquid-modal-card {
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  max-width: 480px;
+  width: 100%;
+  padding: 44px 36px;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+.modal-gold-check {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: var(--brand-gold);
+  color: var(--brand-purple-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 auto 22px;
+}
+
+/* ---------------------------------------------------------
+   8. FOOTER
+   --------------------------------------------------------- */
+.liquid-glass-footer {
+  background-color: var(--brand-purple-deep);
+  color: #E2D9F3;
+  padding: 70px 0 28px;
+  margin-top: auto;
+  border-top: 2px solid var(--brand-gold);
+}
+
+.footer-glass-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-glass-col h5 {
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.footer-glass-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-glass-col ul li button {
+  background: none;
+  border: none;
+  color: #CBBEE2;
+  font-size: 0.92rem;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.footer-glass-col ul li button:hover {
+  color: var(--brand-gold);
+}
+
+.footer-glass-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.82rem;
+  color: #9F92BA;
+}

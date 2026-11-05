@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" width="300" height="360" fill="none">
+  <!-- Flame Details Above Shield -->
+  <g id="flames">
+    <path d="M150 20 C135 50 120 70 125 90 C132 75 142 65 148 55 C146 72 155 85 165 90 C160 70 175 45 150 20 Z" fill="#D84315"/>
+    <path d="M150 35 C142 55 135 70 138 85 C143 75 148 68 150 60 C151 70 156 78 160 85 C156 72 165 52 150 35 Z" fill="#FFB300"/>
+    <circle cx="150" cy="88" r="7" fill="#3B127A"/>
+  </g>
+
+  <!-- Main Shield -->
+  <g id="shield">
+    <!-- Outer Shield Border -->
+    <path d="M60 95 L240 95 C240 180 215 255 150 285 C85 255 60 180 60 95 Z" fill="#FFC72C" stroke="#1A1A24" stroke-width="4" stroke-linejoin="round"/>
+    <!-- Inner Shield Inset -->
+    <path d="M68 103 L232 103 C232 178 209 246 150 274 C91 246 68 178 68 103 Z" fill="#FDB813" stroke="#3B127A" stroke-width="2"/>
+
+    <!-- Purple Horizontal Band with PMS -->
+    <path d="M64 140 L236 140 L233 185 L67 185 Z" fill="#3B127A"/>
+    <text x="150" y="174" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="6">PMS</text>
+
+    <!-- Central Emblems on Lower Shield -->
+    <!-- Open Book / Torch Motif -->
+    <path d="M150 205 L150 245 M150 245 C135 240 115 242 100 248 L100 212 C115 206 135 204 150 210 C165 204 185 206 200 212 L200 248 C185 242 165 240 150 245 Z" fill="#3B127A" stroke="#3B127A" stroke-width="2"/>
+    <path d="M150 210 L150 245" stroke="#FDB813" stroke-width="2"/>
+  </g>
+
+  <!-- Ribbon at Base -->
+  <g id="ribbon">
+    <path d="M30 285 L60 270 L60 295 L30 310 Z" fill="#2A085C"/>
+    <path d="M270 285 L240 270 L240 295 L270 310 Z" fill="#2A085C"/>
+    <path d="M45 285 Q150 315 255 285 L250 315 Q150 345 50 315 Z" fill="#3B127A" stroke="#1A1A24" stroke-width="2"/>
+    <path d="M48 290 Q150 318 252 290" stroke="#FFC72C" stroke-width="1.5" fill="none"/>
+    <!-- Motto Text -->
+    <text x="150" y="309" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">QUEST FOR EXCELLENCE</text>
+  </g>
+</svg>
