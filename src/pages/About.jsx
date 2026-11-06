@@ -4,14 +4,14 @@ import { TargetIcon, TelescopeIcon, SproutIcon } from '../components/Icons';
 export default function About() {
   return (
     <div className="page-animate-enter">
-      <div className="hero-glass-wrapper" style={{ minHeight: '340px' }}>
+      <div className="hero-glass-wrapper" style={{ minHeight: '320px' }}>
         <img src="/images/campus_1.webp" alt="Prime Montessori Campus" className="hero-glass-bg" />
         <div className="hero-glass-overlay"></div>
         <div className="container hero-glass-content">
-          <span className="eyebrow-solid light">ABOUT & MONTESSORI</span>
-          <h1 className="heading-xl hero-glass-title" style={{ marginTop: '14px' }}>Over 30 Years of Dedicated Excellence</h1>
+          <span className="eyebrow-solid light">HERITAGE & PHILOSOPHY</span>
+          <h1 className="heading-xl hero-glass-title" style={{ marginTop: '14px' }}>Three Decades of Distinction.</h1>
           <p className="hero-glass-desc">
-            Since October 1993, Prime Montessori School has fostered academic distinction, moral clarity, and purposeful childhood discovery.
+            Since October 1993, cultivating intellectual independence, moral clarity, and purposeful discovery.
           </p>
         </div>
       </div>
@@ -19,24 +19,20 @@ export default function About() {
       <section className="section-space">
         <div className="container">
           <div className="liquid-split-grid">
-            <div className="glass-card-main">
-              <span className="eyebrow-solid">OUR HERITAGE</span>
-              <h2 className="heading-lg" style={{ margin: '14px 0' }}>Founded October 1993</h2>
-              <p style={{ color: 'var(--color-text)', marginBottom: '14px' }}>
-                Prime Montessori School was established to offer parents an authentic alternative to conventional rote learning, placing the child's natural curiosity at the center of education.
+            <div className="glass-card-main" data-reveal>
+              <span className="eyebrow-solid">FOUNDATION</span>
+              <h2 className="heading-lg" style={{ margin: '14px 0' }}>Established October 1993</h2>
+              <p style={{ color: 'var(--color-text-muted)', marginBottom: '22px', fontSize: '0.95rem' }}>
+                Prime Montessori School unites Maria Montessori’s proven sensory methodology with the Nigerian Universal Basic Education framework—shaping articulate, disciplined, and self-motivated learners from early childhood through Basic 6.
               </p>
-              <p style={{ color: 'var(--color-text-muted)', marginBottom: '20px' }}>
-                By uniting the proven sensory methods of Maria Montessori with the benchmark requirements of the Nigerian Universal Basic Education framework, our school shapes pupils into confident, articulate, and self-motivated problem solvers.
-              </p>
-              <div style={{ padding: '16px 20px', backgroundColor: '#FEF7DE', borderLeft: '4px solid var(--brand-gold)', borderRadius: '12px' }}>
-                <div style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', fontWeight: 800, color: 'var(--brand-purple)' }}>October 1993</div>
-                <div style={{ fontSize: '0.88rem', fontWeight: 700, color: 'var(--color-ink)' }}>Official Foundation Date</div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)' }}>Over three decades of continuous educational service</div>
+              <div style={{ padding: '16px 20px', backgroundColor: '#F5F2FA', borderLeft: '3px solid var(--brand-purple)', borderRadius: '14px' }}>
+                <div style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--brand-purple)' }}>October 1993</div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', marginTop: '2px' }}>Over 30 years of continuous academic leadership</div>
               </div>
             </div>
-            <div className="glass-img-frame">
+            <div className="glass-img-frame" data-reveal data-reveal-delay="1">
               <img src="/images/campus_2.webp" alt="School assembly" />
-              <div className="glass-floating-tag">Prime Montessori Community • Quest for Excellence</div>
+              <div className="glass-floating-tag">Quest for Excellence</div>
             </div>
           </div>
         </div>
@@ -45,40 +41,40 @@ export default function About() {
       {/* GUIDING PRINCIPLES */}
       <section className="section-space" style={{ paddingTop: '0' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '680px', margin: '0 auto 50px' }}>
-            <span className="eyebrow-solid gold">OUR GUIDING PRINCIPLES</span>
-            <h2 className="heading-lg" style={{ marginTop: '12px' }}>Mission, Vision & Motto</h2>
+          <div style={{ textAlign: 'center', maxWidth: '560px', margin: '0 auto 44px' }} data-reveal>
+            <span className="eyebrow-solid gold">CORE IDENTITY</span>
+            <h2 className="heading-lg" style={{ marginTop: '12px' }}>Principles That Guide Us</h2>
           </div>
 
           <div className="pillars-liquid-grid">
-            <div className="pillar-glass-card" style={{ borderTop: '4px solid var(--brand-purple)' }}>
+            <div className="pillar-glass-card" data-reveal data-reveal-delay="1">
               <div className="pillar-icon-box">
-                <TargetIcon size={26} color="var(--brand-purple)" />
+                <TargetIcon size={22} color="var(--brand-purple)" />
               </div>
-              <h4>Our Motto</h4>
-              <p style={{ fontStyle: 'italic', fontWeight: 700, color: 'var(--brand-purple)', marginBottom: '8px' }}>
+              <h4 className="heading-sm">Our Motto</h4>
+              <p style={{ fontWeight: 700, color: 'var(--brand-purple)', fontSize: '0.9rem', margin: '4px 0 6px' }}>
                 “Quest for Excellence”
               </p>
-              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>
-                Enshrined on our school shield, reflecting our daily aspiration in scholarship, personal etiquette, and moral character.
+              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.85rem' }}>
+                Our daily standard in scholarship, etiquette, and character.
               </p>
             </div>
-            <div className="pillar-glass-card" style={{ borderTop: '4px solid var(--brand-gold)' }}>
+            <div className="pillar-glass-card" data-reveal data-reveal-delay="2">
               <div className="pillar-icon-box">
-                <TelescopeIcon size={26} color="var(--brand-purple)" />
+                <TelescopeIcon size={22} color="var(--brand-purple)" />
               </div>
-              <h4>Our Vision</h4>
-              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', marginTop: '8px' }}>
-                To remain a premier early childhood and primary institution celebrated for graduating disciplined, inquisitive, and academically self-reliant pupils.
+              <h4 className="heading-sm">Our Vision</h4>
+              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.85rem', marginTop: '6px' }}>
+                To stand as the premier foundational institution graduating disciplined, inquisitive, and self-reliant young scholars.
               </p>
             </div>
-            <div className="pillar-glass-card" style={{ borderTop: '4px solid var(--brand-flame)' }}>
+            <div className="pillar-glass-card" data-reveal data-reveal-delay="3">
               <div className="pillar-icon-box">
-                <SproutIcon size={26} color="var(--brand-purple)" />
+                <SproutIcon size={22} color="var(--brand-purple)" />
               </div>
-              <h4>Our Mission</h4>
-              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', marginTop: '8px' }}>
-                To nurture the whole child through individualized Montessori mentorship, modern literacy tools, and high ethical expectations.
+              <h4 className="heading-sm">Our Mission</h4>
+              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.85rem', marginTop: '6px' }}>
+                To nurture the whole child through individualized Montessori mentorship, modern literacy, and high ethical standards.
               </p>
             </div>
           </div>

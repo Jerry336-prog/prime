@@ -1,9 +1,9 @@
 /* =======================================================================
-   PRIME MONTESSORI SCHOOLS — FULL-WIDTH LIQUID GLASS HEADER & SOLID SYSTEM
+   PRIME MONTESSORI SCHOOLS — FUTURISTIC LIQUID GLASS & MINIMALIST SYSTEM
    ======================================================================= */
 
 /* ---------------------------------------------------------
-   0. PROFESSIONAL MOTION SYSTEM & KEYFRAME ANIMATIONS
+   0. MOTION SYSTEM & SCROLL REVEAL PRIMITIVES
    --------------------------------------------------------- */
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -13,7 +13,7 @@
 @keyframes fadeSlideUp {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -21,64 +21,61 @@
   }
 }
 
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes subtleFloat {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
-}
-
-/* Page entrance wrapper */
 .page-animate-enter {
-  animation: fadeSlideUp 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeSlideUp 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Staggered Hero animations */
 .hero-stagger-1 {
   opacity: 0;
-  animation: fadeSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
+  animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
 }
 
 .hero-stagger-2 {
   opacity: 0;
-  animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+  animation: fadeSlideUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.14s forwards;
 }
 
 .hero-stagger-3 {
   opacity: 0;
-  animation: fadeSlideUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.22s forwards;
 }
 
 .hero-stagger-4 {
   opacity: 0;
-  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+  animation: fadeSlideUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
 }
 
-/* Accessible Reduced Motion Support */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal-delay="1"] { transition-delay: 0.07s; }
+[data-reveal-delay="2"] { transition-delay: 0.14s; }
+[data-reveal-delay="3"] { transition-delay: 0.21s; }
+[data-reveal-delay="4"] { transition-delay: 0.28s; }
+
 @media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
+  *, ::before, ::after, [data-reveal] {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
 /* ---------------------------------------------------------
-   1. FULL-WIDTH LIQUID GLASS HEADER (Attached to Top, Not Floating)
+   1. FULL-WIDTH TOP-ATTACHED LIQUID GLASS HEADER
    --------------------------------------------------------- */
 .liquid-glass-navbar-header {
   position: sticky;
@@ -86,13 +83,12 @@
   left: 0;
   right: 0;
   width: 100%;
-  height: 72px;
+  height: 70px;
   z-index: 999;
-  background-color: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(24px) saturate(190%);
-  -webkit-backdrop-filter: blur(24px) saturate(190%);
-  border-bottom: 1px solid rgba(229, 231, 235, 0.85);
-  box-shadow: 0 4px 20px rgba(15, 5, 30, 0.04);
+  background-color: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border-bottom: 1px solid rgba(15, 10, 28, 0.06);
   display: flex;
   align-items: center;
   transition: all 0.25s ease;
@@ -105,18 +101,17 @@
   width: 100%;
 }
 
-/* Brand Lockup */
 .brand-lockup {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 11px;
   cursor: pointer;
   text-decoration: none;
 }
 
 .brand-icon-wrap {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,35 +125,32 @@
 
 .brand-name-main {
   font-family: var(--font-sans);
-  font-size: 1.18rem;
+  font-size: 1.12rem;
   font-weight: 800;
   color: var(--brand-purple);
   line-height: 1;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.04em;
 }
 
 .brand-name-sub {
   font-family: var(--font-sans);
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 700;
-  color: var(--brand-purple);
-  letter-spacing: 1.4px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   margin-top: 3px;
-  opacity: 0.9;
 }
 
-/* Navigation Tabs */
+/* Desktop Navigation Pill Dock */
 .nav-links-desktop {
   display: none;
   align-items: center;
-  gap: 8px;
-  background-color: rgba(241, 243, 246, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  gap: 4px;
+  background-color: rgba(243, 244, 248, 0.8);
   padding: 4px;
   border-radius: 9999px;
-  border: 1px solid #E5E7EB;
+  border: 1px solid rgba(15, 10, 28, 0.06);
 }
 
 @media (min-width: 980px) {
@@ -170,39 +162,35 @@
 .nav-tab-btn {
   background-color: transparent;
   border: none;
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   font-weight: 600;
-  color: #4B5563;
-  padding: 8px 18px;
+  color: var(--color-text-muted);
+  padding: 7px 16px;
   border-radius: 9999px;
   cursor: pointer;
-  position: relative;
-  transition: all 0.2s ease;
-  text-decoration: none; /* No underline */
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
 .nav-tab-btn:hover {
-  color: var(--brand-purple);
+  color: var(--color-ink);
   text-decoration: none;
 }
 
 .nav-tab-btn.active {
   color: var(--brand-purple);
   background-color: #FFFFFF;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 10px rgba(15, 10, 28, 0.06);
   text-decoration: none;
 }
 
-/* Remove any bottom bar/line indicator */
 .nav-tab-btn.active::after {
   display: none;
 }
 
-/* Solid CTA Button: "Book a visit →" */
-/* Tactile Button Press Micro-interaction */
 button:active, .btn-solid:active, .btn-nav-book:active {
   transform: scale(0.98);
 }
@@ -211,22 +199,21 @@ button:active, .btn-solid:active, .btn-nav-book:active {
   background-color: var(--brand-purple);
   color: #FFFFFF;
   border: none;
-  border-radius: 10px;
-  font-size: 0.88rem;
+  border-radius: 9999px;
+  font-size: 0.84rem;
   font-weight: 600;
-  padding: 10px 18px;
+  padding: 9px 18px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   cursor: pointer;
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 12px rgba(59, 18, 123, 0.2);
 }
 
 .btn-nav-book:hover {
   background-color: var(--brand-purple-hover);
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(59, 18, 123, 0.3);
+  box-shadow: 0 6px 18px rgba(59, 18, 123, 0.22);
 }
 
 .hamburger-btn {
@@ -234,12 +221,12 @@ button:active, .btn-solid:active, .btn-nav-book:active {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   background-color: #FFFFFF;
-  border: 1px solid #E5E7EB;
-  border-radius: 10px;
-  padding: 8px;
+  border: 1px solid rgba(15, 10, 28, 0.08);
+  border-radius: 9999px;
+  padding: 9px;
   cursor: pointer;
 }
 
@@ -251,39 +238,41 @@ button:active, .btn-solid:active, .btn-nav-book:active {
 
 .hamburger-line {
   width: 100%;
-  height: 2px;
+  height: 1.5px;
   background-color: var(--color-ink);
+  border-radius: 2px;
 }
 
 /* Mobile Drawer */
 .mobile-glass-drawer {
   position: fixed;
-  top: 72px;
+  top: 70px;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid #E5E7EB;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(15, 10, 28, 0.08);
+  box-shadow: 0 24px 48px rgba(15, 10, 28, 0.08);
   z-index: 998;
-  padding: 20px 24px;
+  padding: 16px 20px 22px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+  border-radius: 0 0 24px 24px;
 }
 
 .mobile-glass-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 13px 18px;
-  border-radius: 12px;
-  font-size: 0.95rem;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--color-ink);
-  background-color: #F8F9FA;
-  border: 1px solid #E5E7EB;
+  background-color: #FAFAFC;
+  border: 1px solid rgba(15, 10, 28, 0.05);
   text-align: left;
   cursor: pointer;
 }
@@ -294,13 +283,13 @@ button:active, .btn-solid:active, .btn-nav-book:active {
 }
 
 /* ---------------------------------------------------------
-   2. HERO SECTION (Adjusted for Top Attached Header)
+   2. MINIMALIST FUTURISTIC HERO
    --------------------------------------------------------- */
 .hero-glass-wrapper {
   position: relative;
-  min-height: 560px;
-  padding-top: 70px;
-  padding-bottom: 90px;
+  min-height: 540px;
+  padding-top: 76px;
+  padding-bottom: 96px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -316,9 +305,9 @@ button:active, .btn-solid:active, .btn-nav-book:active {
   object-fit: cover;
   object-position: center;
   opacity: 0.72;
-  filter: saturate(1.1) brightness(0.98);
+  filter: saturate(1.06) brightness(0.98);
   transform: scale(1.0);
-  transition: transform 6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .hero-glass-wrapper:hover .hero-glass-bg {
@@ -331,110 +320,114 @@ button:active, .btn-solid:active, .btn-nav-book:active {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(26, 7, 54, 0.48); /* Reduced purple dimness */
+  background-color: rgba(18, 4, 38, 0.46);
 }
 
 .hero-glass-content {
   position: relative;
   z-index: 2;
-  max-width: 860px;
+  max-width: 780px;
 }
 
 .hero-glass-title {
   color: #FFFFFF;
-  margin-top: 18px;
-  margin-bottom: 22px;
-  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.85); /* Ensures sharp contrast over brighter image */
+  margin-top: 16px;
+  margin-bottom: 18px;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.65);
 }
 
 .hero-glass-desc {
-  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-  line-height: 1.65;
-  color: #FFFFFF;
-  margin-bottom: 38px;
-  max-width: 720px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85); /* Sharp text legibility */
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.94);
+  margin-bottom: 32px;
+  max-width: 580px;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.65);
 }
 
 .hero-btn-row {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 /* ---------------------------------------------------------
-   3. SOLID STATS STRIP
+   3. ARCHITECTURAL BENTO STATS DOCK
    --------------------------------------------------------- */
 .floating-stats-wrap {
   position: relative;
   z-index: 10;
-  margin-top: -46px;
-  margin-bottom: 70px;
+  margin-top: -48px;
+  margin-bottom: 56px;
 }
 
 .glass-stats-panel {
-  background-color: #FFFFFF;
-  border: 1px solid #E5E7EB;
-  border-radius: 20px;
-  padding: 30px 24px;
-  box-shadow: 0 16px 36px rgba(15, 5, 30, 0.08);
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(15, 10, 28, 0.07);
+  border-radius: 24px;
+  padding: 28px 32px;
+  box-shadow: 0 20px 50px rgba(15, 5, 30, 0.06);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
 .glass-stat-item {
-  padding: 8px 16px;
-  border-left: 3px solid var(--brand-gold);
+  padding-left: 16px;
+  border-left: 2px solid var(--brand-gold);
 }
 
 .glass-stat-num {
-  font-family: var(--font-serif);
-  font-size: 2.1rem;
+  font-family: var(--font-sans);
+  font-size: 1.65rem;
   font-weight: 800;
-  color: var(--brand-purple);
-  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+  line-height: 1.1;
 }
 
 .glass-stat-lbl {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--color-ink);
-  margin-top: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--brand-purple);
+  margin-top: 4px;
 }
 
 .glass-stat-sub {
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   color: var(--color-text-muted);
+  margin-top: 2px;
 }
 
 /* ---------------------------------------------------------
-   4. CONTENT CARDS & SECTIONS
+   4. BENTO CONTENT CARDS & SECTIONS
    --------------------------------------------------------- */
 .section-space {
-  padding: 80px 0;
+  padding: 72px 0;
   position: relative;
 }
 
 .glass-card-main {
   background-color: #FFFFFF;
-  border: 1px solid #E5E7EB;
-  border-radius: 20px;
+  border: 1px solid rgba(15, 10, 28, 0.06);
+  border-radius: 24px;
   padding: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: all 0.25s ease;
+  box-shadow: 0 12px 36px rgba(15, 10, 28, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card-main:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 44px rgba(15, 10, 28, 0.06);
 }
 
 .liquid-split-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 52px;
+  gap: 44px;
   align-items: center;
 }
 
@@ -446,35 +439,40 @@ button:active, .btn-solid:active, .btn-nav-book:active {
 
 .glass-img-frame {
   position: relative;
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(15, 10, 28, 0.06);
+  box-shadow: 0 16px 40px rgba(15, 10, 28, 0.06);
 }
 
 .glass-img-frame img {
   width: 100%;
-  height: 400px;
+  height: 380px;
   object-fit: cover;
+  display: block;
 }
 
 .glass-floating-tag {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background-color: rgba(22, 5, 47, 0.9);
+  bottom: 16px;
+  left: 16px;
+  background-color: rgba(18, 4, 38, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: #FFFFFF;
-  padding: 8px 16px;
-  border-radius: 10px;
-  font-size: 0.82rem;
+  padding: 7px 14px;
+  border-radius: 9999px;
+  font-size: 0.74rem;
   font-weight: 600;
-  border-left: 3px solid var(--brand-gold);
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-/* Program Cards */
+/* Program Bento Cards */
 .programs-glass-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
+  gap: 28px;
 }
 
 @media (min-width: 768px) {
@@ -485,23 +483,23 @@ button:active, .btn-solid:active, .btn-nav-book:active {
 
 .program-glass-card {
   background-color: #FFFFFF;
-  border: 1px solid #E5E7EB;
-  border-radius: 20px;
+  border: 1px solid rgba(15, 10, 28, 0.06);
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 12px 32px rgba(15, 10, 28, 0.03);
   display: flex;
   flex-direction: column;
-  transition: all 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .program-glass-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09);
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(15, 10, 28, 0.07);
 }
 
 .program-card-img-wrap {
   position: relative;
-  height: 240px;
+  height: 220px;
   overflow: hidden;
 }
 
@@ -509,18 +507,27 @@ button:active, .btn-solid:active, .btn-nav-book:active {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.program-glass-card:hover .program-card-img-wrap img {
+  transform: scale(1.04);
 }
 
 .program-glass-badge {
   position: absolute;
   top: 16px;
   left: 16px;
-  background-color: var(--brand-purple);
+  background-color: rgba(18, 4, 38, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: #FFFFFF;
-  font-size: 0.74rem;
+  font-size: 0.68rem;
   font-weight: 700;
+  letter-spacing: 0.1em;
   padding: 6px 12px;
-  border-radius: 8px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .program-glass-body {
@@ -533,68 +540,67 @@ button:active, .btn-solid:active, .btn-nav-book:active {
 .pill-glass-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   margin: 16px 0 24px;
 }
 
 .pill-glass-item {
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 600;
-  background-color: #EDE8F7;
+  background-color: #F4F2FA;
   color: var(--brand-purple);
   padding: 5px 12px;
   border-radius: 9999px;
-  border: 1px solid #D8CEEE;
 }
 
 /* Pillars Grid */
 .pillars-liquid-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
 }
 
 .pillar-glass-card {
   background-color: #FFFFFF;
-  border: 1px solid #E5E7EB;
-  border-radius: 18px;
-  padding: 32px 24px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-  transition: all 0.2s ease;
+  border: 1px solid rgba(15, 10, 28, 0.06);
+  border-radius: 22px;
+  padding: 28px 24px;
+  box-shadow: 0 8px 24px rgba(15, 10, 28, 0.025);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .pillar-glass-card:hover {
-  border-color: var(--brand-purple);
-  box-shadow: 0 12px 30px rgba(59, 18, 123, 0.1);
+  border-color: rgba(59, 18, 123, 0.22);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(59, 18, 123, 0.07);
 }
 
 .pillar-icon-box {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
-  background-color: #FEF7DE;
-  border: 1px solid #F8DE8B;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background-color: #F5F2FA;
   color: var(--brand-purple);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 /* ---------------------------------------------------------
-   5. CALLOUT BANNER
+   5. FUTURISTIC CALLOUT BANNER
    --------------------------------------------------------- */
 .liquid-cta-banner {
-  background-color: var(--brand-purple);
-  border-radius: 24px;
-  padding: 56px 44px;
-  box-shadow: 0 20px 48px rgba(59, 18, 123, 0.3);
+  background-color: var(--brand-purple-deep);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  padding: 52px 48px;
+  box-shadow: 0 24px 60px rgba(18, 4, 38, 0.22);
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 28px;
 }
 
 /* ---------------------------------------------------------
@@ -602,16 +608,16 @@ button:active, .btn-solid:active, .btn-nav-book:active {
    --------------------------------------------------------- */
 .glass-form-card {
   background-color: #FFFFFF;
-  border: 1px solid #E5E7EB;
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(15, 10, 28, 0.06);
+  border-radius: 24px;
+  padding: 38px;
+  box-shadow: 0 16px 44px rgba(15, 10, 28, 0.04);
 }
 
 .form-grid-2 {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 16px;
 }
 
 @media (min-width: 640px) {
@@ -623,7 +629,7 @@ button:active, .btn-solid:active, .btn-nav-book:active {
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 6px;
 }
 
 .form-group.full {
@@ -631,27 +637,28 @@ button:active, .btn-solid:active, .btn-nav-book:active {
 }
 
 .form-group label {
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-ink);
+  color: var(--color-text);
+  letter-spacing: 0.01em;
 }
 
 .glass-input, .glass-select, .glass-textarea {
-  padding: 13px 16px;
-  border-radius: 10px;
-  border: 1.5px solid #E5E7EB;
-  background-color: #F8F9FA;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #E2E5EC;
+  background-color: #FAFAFC;
   color: var(--color-ink);
   outline: none;
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   transition: all 0.2s ease;
 }
 
 .glass-input:focus, .glass-select:focus, .glass-textarea:focus {
   border-color: var(--brand-purple);
   background-color: #FFFFFF;
-  box-shadow: 0 0 0 3px rgba(59, 18, 123, 0.12);
+  box-shadow: 0 0 0 3px rgba(59, 18, 123, 0.1);
 }
 
 .glass-input.error, .glass-select.error {
@@ -660,7 +667,7 @@ button:active, .btn-solid:active, .btn-nav-book:active {
 }
 
 .error-text {
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   color: #E11D48;
   font-weight: 600;
 }
@@ -671,94 +678,230 @@ button:active, .btn-solid:active, .btn-nav-book:active {
 .liquid-modal-backdrop {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(15, 4, 32, 0.75);
-  backdrop-filter: blur(8px);
+  background-color: rgba(11, 7, 20, 0.68);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 20px;
 }
 
 .liquid-modal-card {
   background-color: #FFFFFF;
-  border-radius: 24px;
-  max-width: 480px;
+  border-radius: 28px;
+  max-width: 440px;
   width: 100%;
-  padding: 44px 36px;
+  padding: 40px 32px;
   text-align: center;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.25);
 }
 
 .modal-gold-check {
-  width: 68px;
-  height: 68px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background-color: var(--brand-gold);
-  color: var(--brand-purple-dark);
+  background-color: #FEF9E7;
+  border: 1px solid rgba(246, 190, 24, 0.4);
+  color: var(--brand-purple);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin: 0 auto 22px;
+  margin: 0 auto 20px;
 }
 
 /* ---------------------------------------------------------
-   8. FOOTER
+   8. MINIMALIST ARCHITECTURAL FOOTER
    --------------------------------------------------------- */
 .liquid-glass-footer {
   background-color: var(--brand-purple-deep);
-  color: #E2D9F3;
-  padding: 70px 0 28px;
+  color: #D5CBE8;
+  padding: 64px 0 28px;
   margin-top: auto;
-  border-top: 2px solid var(--brand-gold);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-glass-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 36px;
   margin-bottom: 40px;
 }
 
 .footer-glass-col h5 {
   color: #FFFFFF;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
 }
 
 .footer-glass-col ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-
-.footer-glass-col ul li button {
-  background: none;
-  border: none;
-  color: #CBBEE2;
-  font-size: 0.92rem;
-  cursor: pointer;
-  text-align: left;
-  transition: color 0.2s ease;
-}
-
-.footer-glass-col ul li button:hover {
-  color: var(--brand-gold);
+  gap: 10px;
 }
 
 .footer-glass-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  font-size: 0.82rem;
-  color: #9F92BA;
+  font-size: 0.78rem;
+  color: #8E82A6;
+}
+
+/* =========================================================
+   9. MOBILE REFINEMENT & RESPONSIVE POLISH
+   ========================================================= */
+@media (max-width: 768px) {
+  .liquid-glass-navbar-header {
+    height: 62px;
+  }
+
+  .mobile-glass-drawer {
+    top: 62px;
+  }
+
+  .brand-name-main {
+    font-size: 1.05rem;
+  }
+
+  .brand-name-sub {
+    font-size: 0.54rem;
+  }
+
+  .hero-glass-wrapper {
+    min-height: 440px;
+    padding-top: 44px;
+    padding-bottom: 72px;
+  }
+
+  .hero-glass-title {
+    font-size: 2.05rem;
+    line-height: 1.12;
+    margin-top: 12px;
+    margin-bottom: 14px;
+  }
+
+  .hero-glass-desc {
+    font-size: 0.94rem;
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+
+  .hero-btn-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero-btn-row .btn-solid {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .floating-stats-wrap {
+    margin-top: -34px;
+    margin-bottom: 40px;
+  }
+
+  .glass-stats-panel {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 12px;
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .glass-stat-item {
+    padding-left: 10px;
+  }
+
+  .glass-stat-num {
+    font-size: 1.3rem;
+  }
+
+  .glass-stat-lbl {
+    font-size: 0.74rem;
+  }
+
+  .glass-stat-sub {
+    display: none; /* Removes mobile clutter in stats strip */
+  }
+
+  .section-space {
+    padding: 48px 0;
+  }
+
+  .glass-card-main, .glass-form-card {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+
+  .liquid-split-grid {
+    gap: 24px;
+  }
+
+  .glass-img-frame {
+    border-radius: 20px;
+  }
+
+  .glass-img-frame img {
+    height: 220px;
+  }
+
+  .program-card-img-wrap {
+    height: 170px;
+  }
+
+  .program-glass-body {
+    padding: 20px;
+  }
+
+  .pillars-liquid-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .pillar-glass-card {
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+
+  .pillar-icon-box {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+  }
+
+  .liquid-cta-banner {
+    padding: 32px 22px;
+    border-radius: 22px;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .liquid-cta-banner .btn-solid {
+    width: 100%;
+  }
+
+  .glass-input, .glass-select, .glass-textarea {
+    font-size: 16px;
+    min-height: 46px;
+  }
+}
+
+@media (max-width: 420px) {
+  .pillars-liquid-grid {
+    grid-template-columns: 1fr;
+  }
 }

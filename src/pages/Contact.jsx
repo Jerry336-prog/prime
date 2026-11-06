@@ -47,14 +47,14 @@ export default function Contact() {
 
   return (
     <div className="page-animate-enter">
-      <div className="hero-glass-wrapper" style={{ minHeight: '340px' }}>
+      <div className="hero-glass-wrapper" style={{ minHeight: '320px' }}>
         <img src="/images/campus_1.webp" alt="Visit PMS" className="hero-glass-bg" />
         <div className="hero-glass-overlay"></div>
         <div className="container hero-glass-content">
-          <span className="eyebrow-solid light">CAMPUS LOCATION & VISITS</span>
-          <h1 className="heading-xl hero-glass-title" style={{ marginTop: '14px' }}>Contact & Visit Our Campus</h1>
+          <span className="eyebrow-solid light">CAMPUS & VISITS</span>
+          <h1 className="heading-xl hero-glass-title" style={{ marginTop: '14px' }}>Visit Our Campus.</h1>
           <p className="hero-glass-desc">
-            Experience our quiet, purposeful classroom atmosphere in person. Schedule a guided tour or reach out to our administration.
+            Experience our purposeful classrooms in person. Schedule a guided tour or connect with administration.
           </p>
         </div>
       </div>
@@ -64,57 +64,51 @@ export default function Contact() {
         <div className="container">
           <div className="liquid-split-grid">
             {/* Left Column: Official Campus Address & Info */}
-            <div>
-              <span className="eyebrow-solid">CAMPUS DIRECTORY</span>
-              <h2 className="heading-lg" style={{ margin: '14px 0 24px' }}>Official School Address</h2>
+            <div data-reveal>
+              <span className="eyebrow-solid">DIRECTORY</span>
+              <h2 className="heading-lg" style={{ margin: '12px 0 22px' }}>Campus Location</h2>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                <div className="glass-card-main" style={{ borderLeft: '4px solid var(--brand-purple)' }}>
-                  <h4 style={{ color: 'var(--brand-purple)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <MapPinIcon size={18} color="var(--brand-purple)" /> Physical Campus Address
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <div className="glass-card-main" style={{ padding: '22px 24px', borderLeft: '3px solid var(--brand-purple)' }}>
+                  <h4 className="heading-sm" style={{ color: 'var(--brand-purple)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <MapPinIcon size={17} color="var(--brand-purple)" /> Physical Address
                   </h4>
-                  <p style={{ fontWeight: 700, color: 'var(--color-ink)', fontSize: '1.05rem', marginTop: '6px' }}>
+                  <p style={{ fontWeight: 700, color: 'var(--color-ink)', fontSize: '0.98rem', marginTop: '6px' }}>
                     23, New Road, Ballot Close
                   </p>
-                  <p style={{ color: 'var(--color-text)', marginTop: '2px' }}>
-                    Off Community Road, Satellite Town, Lagos State, Nigeria.
-                  </p>
-                  <p style={{ color: 'var(--color-text-muted)', fontSize: '0.85rem', marginTop: '6px' }}>
-                    Driving Directions: Accessible via Badagry Expressway / Alakija or Festac Link into Satellite Town.
+                  <p style={{ color: 'var(--color-text-muted)', fontSize: '0.88rem', marginTop: '2px' }}>
+                    Off Community Road, Satellite Town, Lagos.
                   </p>
                 </div>
 
-                <div className="glass-card-main" style={{ borderLeft: '4px solid var(--brand-gold)' }}>
-                  <h4 style={{ color: 'var(--brand-purple)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <PhoneIcon size={18} color="var(--brand-purple)" /> Telephone Lines
+                <div className="glass-card-main" style={{ padding: '22px 24px', borderLeft: '3px solid var(--brand-gold)' }}>
+                  <h4 className="heading-sm" style={{ color: 'var(--brand-purple)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <PhoneIcon size={17} color="var(--brand-purple)" /> Direct Line
                   </h4>
-                  <p style={{ fontWeight: 700, color: 'var(--color-ink)', fontSize: '1.05rem', marginTop: '6px' }}>
+                  <p style={{ fontWeight: 700, color: 'var(--color-ink)', fontSize: '0.98rem', marginTop: '6px' }}>
                     0808 031 1206
                   </p>
-                  <p style={{ color: 'var(--color-text-muted)', fontSize: '0.88rem' }}>
-                    Administrative Hours: Monday – Friday, 7:30 AM to 4:00 PM.
+                  <p style={{ color: 'var(--color-text-muted)', fontSize: '0.84rem', marginTop: '2px' }}>
+                    Mon – Fri • 7:30 AM – 4:00 PM
                   </p>
                 </div>
 
-                <div className="glass-card-main" style={{ borderLeft: '4px solid var(--brand-flame)' }}>
-                  <h4 style={{ color: 'var(--brand-purple)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <MailIcon size={18} color="var(--brand-purple)" /> Official Email
+                <div className="glass-card-main" style={{ padding: '22px 24px', borderLeft: '3px solid var(--brand-purple)' }}>
+                  <h4 className="heading-sm" style={{ color: 'var(--brand-purple)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <MailIcon size={17} color="var(--brand-purple)" /> Electronic Mail
                   </h4>
-                  <p style={{ fontWeight: 700, color: 'var(--color-ink)', fontSize: '1.05rem', marginTop: '6px' }}>
+                  <p style={{ fontWeight: 700, color: 'var(--color-ink)', fontSize: '0.98rem', marginTop: '6px' }}>
                     info@pmsnigeria.com
-                  </p>
-                  <p style={{ color: 'var(--color-text-muted)', fontSize: '0.88rem' }}>
-                    For general enquiries, admissions packets, and official correspondence.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: Book a Visit Solid Form with Supabase */}
-            <div className="glass-form-card">
-              <h3 className="heading-md" style={{ marginBottom: '8px' }}>Book a Campus Visit</h3>
-              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', marginBottom: '22px' }}>
-                Schedule an in-person walk-through with our admissions team.
+            {/* Right Column: Book a Visit Solid Form */}
+            <div className="glass-form-card" data-reveal data-reveal-delay="1">
+              <h3 className="heading-md" style={{ marginBottom: '4px' }}>Schedule a Tour</h3>
+              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.86rem', marginBottom: '22px' }}>
+                Select a preferred date and time slot for your guided campus walk-through.
               </p>
 
               {apiError && (

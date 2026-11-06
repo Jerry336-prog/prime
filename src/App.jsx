@@ -7,6 +7,7 @@ import About from './pages/About';
 import Programs from './pages/Programs';
 import Admissions from './pages/Admissions';
 import Contact from './pages/Contact';
+import { useScrollReveal } from './hooks/useScrollReveal';
 import './App.css';
 
 // Automatically scrolls to top on route change
@@ -21,6 +22,10 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const location = useLocation();
+
+  // Re-run scroll reveal listener on page transition
+  useScrollReveal();
   return (
     <div className="app-shell">
       <ScrollToTop />

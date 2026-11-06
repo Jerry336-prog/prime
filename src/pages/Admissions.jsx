@@ -77,14 +77,14 @@ export default function Admissions() {
 
   return (
     <div className="page-animate-enter">
-      <div className="hero-glass-wrapper" style={{ minHeight: '340px' }}>
+      <div className="hero-glass-wrapper" style={{ minHeight: '320px' }}>
         <img src="/images/campus_1.webp" alt="Prime Montessori Campus" className="hero-glass-bg" />
         <div className="hero-glass-overlay"></div>
         <div className="container hero-glass-content">
-          <span className="eyebrow-solid light">ENROLLMENT & ADMISSIONS</span>
-          <h1 className="heading-xl hero-glass-title" style={{ marginTop: '14px' }}>Join the Prime Family</h1>
+          <span className="eyebrow-solid light">ADMISSIONS</span>
+          <h1 className="heading-xl hero-glass-title" style={{ marginTop: '14px' }}>Join the Prime Community.</h1>
           <p className="hero-glass-desc">
-            We welcome applications throughout the academic year. Experience our nurturing classrooms and supportive mentors.
+            Applications are open year-round for Playgroup, Nursery, and Primary placement.
           </p>
         </div>
       </div>
@@ -93,55 +93,55 @@ export default function Admissions() {
         <div className="container">
           <div className="liquid-split-grid" style={{ alignItems: 'flex-start' }}>
             {/* Left: Enrollment Steps */}
-            <div>
-              <span className="eyebrow-solid">STEP-BY-STEP PROCESS</span>
-              <h2 className="heading-lg" style={{ margin: '14px 0 24px' }}>How to Enroll</h2>
+            <div data-reveal>
+              <span className="eyebrow-solid">ENROLLMENT PATH</span>
+              <h2 className="heading-lg" style={{ margin: '12px 0 22px' }}>Four Simple Steps</h2>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                <div className="glass-card-main" style={{ padding: '20px', display: 'flex', gap: '16px', alignItems: 'center' }}>
-                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', backgroundColor: 'var(--brand-purple)', color: '#FFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, flexShrink: 0 }}>1</div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                <div className="glass-card-main" style={{ padding: '18px 20px', display: 'flex', gap: '16px', alignItems: 'center' }}>
+                  <div style={{ width: '36px', height: '36px', borderRadius: '50%', backgroundColor: '#F5F2FA', color: 'var(--brand-purple)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.88rem', flexShrink: 0 }}>01</div>
                   <div>
-                    <h4 className="heading-sm">Submit Online Enquiry</h4>
-                    <p style={{ color: 'var(--color-text-muted)', fontSize: '0.88rem' }}>Fill out the enquiry form with your contact details and child's class.</p>
+                    <h4 className="heading-sm">Online Enquiry</h4>
+                    <p style={{ color: 'var(--color-text-muted)', fontSize: '0.84rem', marginTop: '2px' }}>Submit your contact details and target class.</p>
                   </div>
                 </div>
 
-                <div className="glass-card-main" style={{ padding: '20px', display: 'flex', gap: '16px', alignItems: 'center' }}>
-                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', backgroundColor: 'var(--brand-purple)', color: '#FFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, flexShrink: 0 }}>2</div>
+                <div className="glass-card-main" style={{ padding: '18px 20px', display: 'flex', gap: '16px', alignItems: 'center' }}>
+                  <div style={{ width: '36px', height: '36px', borderRadius: '50%', backgroundColor: '#F5F2FA', color: 'var(--brand-purple)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.88rem', flexShrink: 0 }}>02</div>
                   <div>
-                    <h4 className="heading-sm">Campus Tour & Interaction</h4>
-                    <p style={{ color: 'var(--color-text-muted)', fontSize: '0.88rem' }}>Visit our campus to inspect our classrooms and engage in an informal child readiness check.</p>
+                    <h4 className="heading-sm">Campus Tour & Assessment</h4>
+                    <p style={{ color: 'var(--color-text-muted)', fontSize: '0.84rem', marginTop: '2px' }}>Tour our classrooms and complete an informal readiness check.</p>
                   </div>
                 </div>
 
-                <div className="glass-card-main" style={{ padding: '20px', display: 'flex', gap: '16px', alignItems: 'center' }}>
-                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', backgroundColor: 'var(--brand-purple)', color: '#FFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, flexShrink: 0 }}>3</div>
+                <div className="glass-card-main" style={{ padding: '18px 20px', display: 'flex', gap: '16px', alignItems: 'center' }}>
+                  <div style={{ width: '36px', height: '36px', borderRadius: '50%', backgroundColor: '#F5F2FA', color: 'var(--brand-purple)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.88rem', flexShrink: 0 }}>03</div>
                   <div>
-                    <h4 className="heading-sm">Offer of Admission</h4>
-                    <p style={{ color: 'var(--color-text-muted)', fontSize: '0.88rem' }}>Receive a formal placement offer along with the enrollment packet and fee details.</p>
+                    <h4 className="heading-sm">Admission Offer</h4>
+                    <p style={{ color: 'var(--color-text-muted)', fontSize: '0.84rem', marginTop: '2px' }}>Receive your formal placement offer and enrollment packet.</p>
                   </div>
                 </div>
 
-                <div className="glass-card-main" style={{ padding: '20px', display: 'flex', gap: '16px', alignItems: 'center' }}>
-                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', backgroundColor: 'var(--brand-gold)', color: '#210947', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, flexShrink: 0 }}>4</div>
+                <div className="glass-card-main" style={{ padding: '18px 20px', display: 'flex', gap: '16px', alignItems: 'center' }}>
+                  <div style={{ width: '36px', height: '36px', borderRadius: '50%', backgroundColor: 'var(--brand-gold)', color: '#210947', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.88rem', flexShrink: 0 }}>04</div>
                   <div>
-                    <h4 className="heading-sm">Orientation & First Day</h4>
-                    <p style={{ color: 'var(--color-text-muted)', fontSize: '0.88rem' }}>Meet class teachers, receive uniforms and learning materials, and begin your child's journey.</p>
+                    <h4 className="heading-sm">Orientation</h4>
+                    <p style={{ color: 'var(--color-text-muted)', fontSize: '0.84rem', marginTop: '2px' }}>Meet educators, collect learning materials, and begin.</p>
                   </div>
                 </div>
               </div>
 
-              <div style={{ marginTop: '28px', padding: '22px', backgroundColor: '#FEF7DE', borderRadius: '18px', border: '1px solid #F8DE8B' }}>
-                <h4 style={{ color: '#8C6500', marginBottom: '6px', fontWeight: 700 }}>Direct Admissions Helpline</h4>
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-text)' }}>Prefer speaking to our admissions desk directly? Call <strong>0808 031 1206</strong> or email <strong>info@pmsnigeria.com</strong>.</p>
+              <div style={{ marginTop: '20px', padding: '18px 20px', backgroundColor: '#F5F2FA', borderRadius: '16px', borderLeft: '3px solid var(--brand-purple)' }}>
+                <div style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--brand-purple)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Direct Admissions Desk</div>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text)', marginTop: '4px' }}>Call <strong>0808 031 1206</strong> or email <strong>info@pmsnigeria.com</strong></p>
               </div>
             </div>
 
-            {/* Right: Solid Form Card with Supabase Integration */}
-            <div className="glass-form-card">
-              <h3 className="heading-md" style={{ marginBottom: '6px' }}>Admissions Enquiry Form</h3>
-              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', marginBottom: '24px' }}>
-                Complete this form and your enquiry will be sent directly to our Supabase database.
+            {/* Right: Solid Form Card */}
+            <div className="glass-form-card" data-reveal data-reveal-delay="1">
+              <h3 className="heading-md" style={{ marginBottom: '4px' }}>Admissions Enquiry</h3>
+              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.86rem', marginBottom: '22px' }}>
+                Our admissions office will respond promptly upon submission.
               </p>
 
               {apiError && (

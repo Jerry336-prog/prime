@@ -13,63 +13,63 @@ export default function Footer() {
         <div className="footer-glass-grid">
           {/* Col 1 */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-              <img src="/logo.webp" alt="Prime Montessori Crest" style={{ width: '42px', height: '42px', objectFit: 'contain' }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
+              <img src="/logo.webp" alt="Prime Montessori Crest" style={{ width: '38px', height: '38px', objectFit: 'contain' }} />
               <div>
-                <h4 style={{ color: '#FFFFFF', fontSize: '1rem', fontWeight: 800 }}>PRIME MONTESSORI SCHOOLS</h4>
-                <span style={{ color: 'var(--brand-gold)', fontSize: '0.78rem', fontWeight: 700 }}>QUEST FOR EXCELLENCE</span>
+                <h4 style={{ color: '#FFFFFF', fontSize: '0.94rem', fontWeight: 800, letterSpacing: '0.03em' }}>PRIME MONTESSORI</h4>
+                <span style={{ color: 'var(--brand-gold)', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.12em' }}>QUEST FOR EXCELLENCE</span>
               </div>
             </div>
-            <p style={{ fontSize: '0.88rem', color: '#BDB1D4', lineHeight: 1.6, maxWidth: '300px' }}>
-              Nurturing confident, disciplined, and curious learners since October 1993. Crèche to Basic 6.
+            <p style={{ fontSize: '0.84rem', color: '#B5A8CC', lineHeight: 1.55, maxWidth: '270px' }}>
+              Foundational Montessori & Primary education since October 1993. Crèche through Basic 6.
             </p>
           </div>
 
           {/* Col 2 */}
           <div className="footer-glass-col">
-            <h5>Navigation</h5>
-            <ul>
+            <h5>Directory</h5>
+            <ul style={{ fontSize: '0.86rem' }}>
               <li><Link to="/" onClick={scrollToTop} style={{ color: 'inherit' }}>Home</Link></li>
-              <li><Link to="/about" onClick={scrollToTop} style={{ color: 'inherit' }}>About & Montessori</Link></li>
-              <li><Link to="/programs" onClick={scrollToTop} style={{ color: 'inherit' }}>Programs (Nursery & Primary)</Link></li>
+              <li><Link to="/about" onClick={scrollToTop} style={{ color: 'inherit' }}>Philosophy</Link></li>
+              <li><Link to="/programs" onClick={scrollToTop} style={{ color: 'inherit' }}>Programs</Link></li>
               <li><Link to="/admissions" onClick={scrollToTop} style={{ color: 'inherit' }}>Admissions</Link></li>
-              <li><Link to="/contact" onClick={scrollToTop} style={{ color: 'inherit' }}>Contact & Visit</Link></li>
+              <li><Link to="/contact" onClick={scrollToTop} style={{ color: 'inherit' }}>Visit Campus</Link></li>
             </ul>
           </div>
 
           {/* Col 3 */}
           <div className="footer-glass-col">
-            <h5>Academic Programs</h5>
-            <ul>
-              <li><Link to="/programs" onClick={scrollToTop} style={{ color: 'inherit' }}>Playgroup (Age 1.5 - 2)</Link></li>
-              <li><Link to="/programs" onClick={scrollToTop} style={{ color: 'inherit' }}>Nursery Department (Age 2 - 5)</Link></li>
-              <li><Link to="/programs" onClick={scrollToTop} style={{ color: 'inherit' }}>Primary School (Basic 1 - 6)</Link></li>
-              <li><Link to="/programs" onClick={scrollToTop} style={{ color: 'inherit' }}>Common Entrance Preparation</Link></li>
+            <h5>Pathways</h5>
+            <ul style={{ fontSize: '0.86rem' }}>
+              <li><Link to="/programs" onClick={scrollToTop} style={{ color: 'inherit' }}>Playgroup & Pre-School</Link></li>
+              <li><Link to="/programs" onClick={scrollToTop} style={{ color: 'inherit' }}>Nursery & Kindergarten</Link></li>
+              <li><Link to="/programs" onClick={scrollToTop} style={{ color: 'inherit' }}>Primary (Basic 1 – 6)</Link></li>
+              <li><Link to="/programs" onClick={scrollToTop} style={{ color: 'inherit' }}>Common Entrance Prep</Link></li>
             </ul>
           </div>
 
           {/* Col 4 */}
           <div className="footer-glass-col">
-            <h5>Campus Enquiries</h5>
-            <div style={{ fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '10px', color: '#BDB1D4' }}>
+            <h5>Contact</h5>
+            <div style={{ fontSize: '0.85rem', display: 'flex', flexDirection: 'column', gap: '10px', color: '#B5A8CC' }}>
               <p style={{ display: 'flex', alignItems: 'center', gap: '8px', margin: 0 }}>
-                <PhoneIcon size={16} color="var(--brand-gold)" /> 0808 031 1206
+                <PhoneIcon size={15} color="var(--brand-gold)" /> 0808 031 1206
               </p>
               <p style={{ display: 'flex', alignItems: 'center', gap: '8px', margin: 0 }}>
-                <MailIcon size={16} color="var(--brand-gold)" /> info@pmsnigeria.com
+                <MailIcon size={15} color="var(--brand-gold)" /> info@pmsnigeria.com
               </p>
               <p style={{ display: 'flex', alignItems: 'center', gap: '8px', margin: 0 }}>
-                <ClockIcon size={16} color="var(--brand-gold)" /> Mon – Fri: 7:30 AM – 3:30 PM
+                <ClockIcon size={15} color="var(--brand-gold)" /> Mon – Fri • 7:30 AM – 3:30 PM
               </p>
-              <Link to="/contact" onClick={scrollToTop} style={{ color: 'var(--brand-gold)', fontWeight: 600, marginTop: '4px', display: 'inline-block' }}>
-                View Full Campus Location Details →
+              <Link to="/contact" onClick={scrollToTop} style={{ color: 'var(--brand-gold)', fontWeight: 600, fontSize: '0.82rem', marginTop: '4px', display: 'inline-block' }}>
+                Campus Location →
               </Link>
             </div>
           </div>
         </div>
 
         <div className="footer-glass-bottom">
-          <span>© 2026 Prime Montessori Schools. All Rights Reserved.</span>
+          <span>© 2026 Prime Montessori Schools. All rights reserved.</span>
         </div>
       </div>
     </footer>
